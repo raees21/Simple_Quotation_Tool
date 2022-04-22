@@ -13,5 +13,7 @@ namespace Simple_Quotation_Tool
         public string LastName { get; set; }
 
         public DateTime BirthDate { get; set; }
+
+        //testgpg
     }
 }
