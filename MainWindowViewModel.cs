@@ -28,6 +28,8 @@ namespace Simple_Quotation_Tool
 
         #endregion
 
+        #region Variables
+
         private string customerName;
         public string CustomerName
         {
@@ -70,18 +72,118 @@ namespace Simple_Quotation_Tool
             }
         }
 
-        private string customerEmail;
-        public string CustomerEmail
+        private string customerAddress1;
+        public string CustomerAddress1
         {
-            get { return customerEmail; }
+            get { return customerAddress1; }
             set
             {
-                if (value != customerEmail)
+                if (value != customerAddress1)
                 {
-                    customerEmail = value;
-                    OnPropertyChange(nameof(CustomerEmail));
+                    customerAddress1 = value;
+                    OnPropertyChange(nameof(CustomerAddress1));
                 }
             }
         }
+
+        private string customerAddress2;
+        public string CustomerAddress2
+        {
+            get { return customerAddress2; }
+            set
+            {
+                if (value != customerAddress2)
+                {
+                    customerAddress2 = value;
+                    OnPropertyChange(nameof(CustomerAddress2));
+                }
+            }
+        }
+
+        private string customerAddress3;
+        public string CustomerAddress3
+        {
+            get { return customerAddress3; }
+            set
+            {
+                if (value != customerAddress3)
+                {
+                    customerAddress3 = value;
+                    OnPropertyChange(nameof(CustomerAddress3));
+                }
+            }
+        }
+
+        private string postalCode;
+        public string PostalCode
+        {
+            get { return postalCode; }
+            set
+            {
+                if (value != postalCode)
+                {
+                    postalCode = value;
+                    OnPropertyChange(nameof(PostalCode));
+                }
+            }
+        }
+
+        private string city;
+        public string City
+        {
+            get { return city; }
+            set
+            {
+                if (value != city)
+                {
+                    city = value;
+                    OnPropertyChange(nameof(City));
+                }
+            }
+        }
+
+        private string notes;
+        public string Notes
+        {
+            get { return notes; }
+            set
+            {
+                if (value != notes)
+                {
+                    notes = value;
+                    OnPropertyChange(nameof(Notes));
+                }
+            }
+        }
+
+        private string quoteNo;
+        public string QuoteNo
+        {
+            get { return quoteNo; }
+            set
+            {
+                if (value != quoteNo)
+                {
+                    quoteNo = value;
+                    OnPropertyChange(nameof(QuoteNo));
+                }
+            }
+        }
+
+        private bool type;
+        public bool Type
+        {
+            get { return type; }
+            set
+            {
+                if (value != type)
+                {
+                    type = value;
+                    OnPropertyChange(nameof(Type));
+                }
+            }
+        }
+
+        #endregion
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Simple_Quotation_Tool" d:DataContext="{d:DesignInstance Type=local:MainWindowViewModel}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="600" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
@@ -18,17 +18,33 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Margin="4" Text="{Binding FullName}" HorizontalAlignment="Center" FontWeight="Bold"/>
+        <Label Grid.Column="0" Grid.Row="1" Margin="4" Content="Customer Name: " HorizontalAlignment="Right"/>
 
-        <Label Grid.Column="0" Grid.Row="1" Margin="4" Content="First Name:" HorizontalAlignment="Right"/>
-        <!-- UpdateSourceTrigger=PropertyChanged makes sure that changes in the TextBoxes are immediately applied to the model. -->
-        <TextBox Grid.Column="1" Grid.Row="1" Margin="4" Text="{Binding FirstName, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Width="200"/>
+        <TextBox Grid.Column="1" Grid.Row="1" Margin="4" Text="{Binding CustomerName, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Left" Width="200"/>
 
-        <Label Grid.Column="0" Grid.Row="2" Margin="4" Content="Last Name:" HorizontalAlignment="Right"/>
-        <TextBox Grid.Column="1" Grid.Row="2" Margin="4" Text="{Binding LastName, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left"  Width="200"/>
+        <Label Grid.Column="0" Grid.Row="2" Margin="4" Content="Customer Cell No: " HorizontalAlignment="Right"/>
+        <TextBox Grid.Column="1" Grid.Row="2" Margin="4" Text="{Binding CustomerCell, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Left"  Width="200"/>
 
-        <Label Grid.Column="0" Grid.Row="3" Margin="4" Content="Age:" HorizontalAlignment="Right"/>
-        <TextBlock Grid.Column="1" Grid.Row="3" Margin="4" Text="{Binding Age}" HorizontalAlignment="Left"/>
+        <Label Grid.Column="0" Grid.Row="3" Margin="4" Content="Customer Email: " HorizontalAlignment="Right"/>
+        <TextBox Grid.Column="1" Grid.Row="3" Margin="4" Text="{Binding CustomerEmail, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Left" Width="200"/>
+
+        <Label Grid.Row="3" Margin="0,35,0,-37" Content="Customer Address Line 1: " HorizontalAlignment="Center"/>
+        <TextBox Grid.Column="1" Grid.Row="3" Margin="4,35,0,-27" Text="{Binding CustomerAddress1, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Left" Width="200"/>
+
+        <Label Grid.Row="3" Margin="0,71,0,-65" Content="Customer Address Line 2: " HorizontalAlignment="Center" RenderTransformOrigin="0.555,2.327"/>
+        <TextBox Grid.Column="1" Grid.Row="3" Margin="4,71,0,-63" Text="{Binding CustomerAddress2, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Left" Width="200"/>
+
+        <Label Grid.Row="3" Margin="0,99,0,-97" Content="Customer Address Line 3: " HorizontalAlignment="Center" RenderTransformOrigin="0.555,2.327"/>
+        <TextBox Grid.Column="1" Grid.Row="3" Margin="5,102,0,-94" Text="{Binding CustomerAddress3, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Left" Width="200"/>
+
+        <Label Grid.Row="3" Margin="0,133,0,-131" Content="Customer Postal Code: " HorizontalAlignment="Center" RenderTransformOrigin="0.555,2.327"/>
+        <TextBox Grid.Column="1" Grid.Row="3" Margin="5,133,0,-125" Text="{Binding PostalCode, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Left" Width="200"/>
+
+        <Label Grid.Row="3" Margin="0,164,0,-162" Content="Customer City: " HorizontalAlignment="Center" RenderTransformOrigin="0.555,2.327"/>
+        <TextBox Grid.Column="1" Grid.Row="3" Margin="5,164,0,-156" Text="{Binding City, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Left" Width="200"/>
+
+        <Label Grid.Row="3" Margin="5,196,0,-194" Content="Invoice / Quote Number " HorizontalAlignment="Left" RenderTransformOrigin="0.555,2.327" Grid.ColumnSpan="2"/>
+        <TextBox Grid.Column="1" Grid.Row="3" Margin="5,198,0,-190" Text="{Binding QuoteNo, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Left" Width="200"/>
 
     </Grid>
 </Window>
