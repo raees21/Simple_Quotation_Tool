@@ -9,7 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Masons.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Syncfusion.Pdf.Wpf" Version="20.1.0.47" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Masons.png" />
   </ItemGroup>
 
 </Project>

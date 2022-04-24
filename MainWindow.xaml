@@ -5,46 +5,46 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Simple_Quotation_Tool" d:DataContext="{d:DesignInstance Type=local:MainWindowViewModel}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="800">
+        Title="Masons Quotation Tool - Developed by: Raees Aziz Muhammad" Height="600" Width="800">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-
-        <Label Grid.Column="0" Grid.Row="1" Margin="4" Content="Customer Name: " HorizontalAlignment="Right"/>
-
-        <TextBox Grid.Column="1" Grid.Row="1" Margin="4" Text="{Binding CustomerName, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Left" Width="200"/>
-
-        <Label Grid.Column="0" Grid.Row="2" Margin="4" Content="Customer Cell No: " HorizontalAlignment="Right"/>
-        <TextBox Grid.Column="1" Grid.Row="2" Margin="4" Text="{Binding CustomerCell, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Left"  Width="200"/>
-
-        <Label Grid.Column="0" Grid.Row="3" Margin="4" Content="Customer Email: " HorizontalAlignment="Right"/>
-        <TextBox Grid.Column="1" Grid.Row="3" Margin="4" Text="{Binding CustomerEmail, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Left" Width="200"/>
-
-        <Label Grid.Row="3" Margin="0,35,0,-37" Content="Customer Address Line 1: " HorizontalAlignment="Center"/>
-        <TextBox Grid.Column="1" Grid.Row="3" Margin="4,35,0,-27" Text="{Binding CustomerAddress1, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Left" Width="200"/>
-
-        <Label Grid.Row="3" Margin="0,71,0,-65" Content="Customer Address Line 2: " HorizontalAlignment="Center" RenderTransformOrigin="0.555,2.327"/>
-        <TextBox Grid.Column="1" Grid.Row="3" Margin="4,71,0,-63" Text="{Binding CustomerAddress2, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Left" Width="200"/>
-
-        <Label Grid.Row="3" Margin="0,99,0,-97" Content="Customer Address Line 3: " HorizontalAlignment="Center" RenderTransformOrigin="0.555,2.327"/>
-        <TextBox Grid.Column="1" Grid.Row="3" Margin="5,102,0,-94" Text="{Binding CustomerAddress3, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Left" Width="200"/>
-
-        <Label Grid.Row="3" Margin="0,133,0,-131" Content="Customer Postal Code: " HorizontalAlignment="Center" RenderTransformOrigin="0.555,2.327"/>
-        <TextBox Grid.Column="1" Grid.Row="3" Margin="5,133,0,-125" Text="{Binding PostalCode, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Left" Width="200"/>
-
-        <Label Grid.Row="3" Margin="0,164,0,-162" Content="Customer City: " HorizontalAlignment="Center" RenderTransformOrigin="0.555,2.327"/>
-        <TextBox Grid.Column="1" Grid.Row="3" Margin="5,164,0,-156" Text="{Binding City, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Left" Width="200"/>
-
-        <Label Grid.Row="3" Margin="5,196,0,-194" Content="Invoice / Quote Number " HorizontalAlignment="Left" RenderTransformOrigin="0.555,2.327" Grid.ColumnSpan="2"/>
-        <TextBox Grid.Column="1" Grid.Row="3" Margin="5,198,0,-190" Text="{Binding QuoteNo, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Left" Width="200"/>
-
+        <StackPanel Orientation="Vertical">
+            <Image Source="/Masons.png" Grid.Row="1" Width="300"/>
+            <StackPanel Orientation="Horizontal" Grid.Row="2">
+                <TextBlock Text="Customer Name      " FontSize="22"/>
+                <TextBox Text="{Binding CustomerName, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Width="300" Margin="5, 0, 0, 3"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="3">
+                <TextBlock Text="Customer Cell          " FontSize="22"/>
+                <TextBox Text="{Binding CustomerCell, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Width="300" Margin="5, 0, 0, 3"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="4">
+                <TextBlock Text="Customer Email       " FontSize="22"/>
+                <TextBox Text="{Binding CustomerEmail, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Width="305" Margin="5, 0, 0, 3"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="5">
+                <TextBlock Text="Customer Address 1" FontSize="22"/>
+                <TextBox Text="{Binding CustomerAddress1, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Width="300" Margin="5, 0, 0, 3"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="6">
+                <TextBlock Text="Customer Address 2" FontSize="22"/>
+                <TextBox Text="{Binding CustomerAddress2, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Width="300" Margin="5, 0, 0, 3"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="6">
+                <TextBlock Text="Customer Address 3" FontSize="22"/>
+                <TextBox Text="{Binding CustomerAddress3, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Width="300" Margin="5, 0, 0, 3"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="6">
+                <TextBlock Text="City                          " FontSize="22"/>
+                <TextBox Text="{Binding City, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Width="300" Margin="5, 0, 0, 3"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="6">
+                <TextBlock Text="Postal Code             " FontSize="22"/>
+                <TextBox Text="{Binding PostalCode, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Width="300" Margin="5, 0, 0, 3"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="6">
+                <TextBlock Text="Quote Number        " FontSize="22"/>
+                <TextBox Text="{Binding PostalCode, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Width="300" Margin="5, 0, 0, 3"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>
