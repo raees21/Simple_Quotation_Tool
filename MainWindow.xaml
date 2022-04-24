@@ -8,42 +8,72 @@
         Title="Masons Quotation Tool - Developed by: Raees Aziz Muhammad" Height="600" Width="800">
     <Grid>
         <StackPanel Orientation="Vertical">
-            <Image Source="/Masons.png" Grid.Row="1" Width="300"/>
-            <StackPanel Orientation="Horizontal" Grid.Row="2">
-                <TextBlock Text="Customer Name      " FontSize="22"/>
-                <TextBox Text="{Binding CustomerName, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Width="300" Margin="5, 0, 0, 3"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Grid.Row="3">
-                <TextBlock Text="Customer Cell          " FontSize="22"/>
-                <TextBox Text="{Binding CustomerCell, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Width="300" Margin="5, 0, 0, 3"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Grid.Row="4">
-                <TextBlock Text="Customer Email       " FontSize="22"/>
-                <TextBox Text="{Binding CustomerEmail, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Width="305" Margin="5, 0, 0, 3"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Grid.Row="5">
-                <TextBlock Text="Customer Address 1" FontSize="22"/>
-                <TextBox Text="{Binding CustomerAddress1, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Width="300" Margin="5, 0, 0, 3"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Grid.Row="6">
-                <TextBlock Text="Customer Address 2" FontSize="22"/>
-                <TextBox Text="{Binding CustomerAddress2, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Width="300" Margin="5, 0, 0, 3"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Grid.Row="6">
-                <TextBlock Text="Customer Address 3" FontSize="22"/>
-                <TextBox Text="{Binding CustomerAddress3, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Width="300" Margin="5, 0, 0, 3"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Grid.Row="6">
-                <TextBlock Text="City                          " FontSize="22"/>
-                <TextBox Text="{Binding City, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Width="300" Margin="5, 0, 0, 3"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Grid.Row="6">
-                <TextBlock Text="Postal Code             " FontSize="22"/>
-                <TextBox Text="{Binding PostalCode, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Width="300" Margin="5, 0, 0, 3"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Grid.Row="6">
-                <TextBlock Text="Quote Number        " FontSize="22"/>
-                <TextBox Text="{Binding PostalCode, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Width="300" Margin="5, 0, 0, 3"/>
+            <Image Source="/Masons.png" Width="300"/>
+            <StackPanel Orientation="Horizontal">
+                <ListView Grid.Column="1">
+                    <ListViewItem>
+                        <TextBlock Text="Customer Name " FontSize="22" Height="28"/>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <TextBlock Text="Custiomer Cell " FontSize="22" Height="28"/>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <TextBlock Text="Customer Email" FontSize="22" Height="28"/>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <TextBlock Text="Customer Address 1" FontSize="22" Height="28"/>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <TextBlock Text="Customer Address 2" FontSize="22" Height="28"/>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <TextBlock Text="Customer Address 3" FontSize="22" Height="28"/>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <TextBlock Text="City" FontSize="22" Height="28"/>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <TextBlock Text="Postal Code" FontSize="22" Height="28"/>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <TextBlock Text="Notes" FontSize="22" Height="28"/>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <TextBlock Text="Quote No" FontSize="22" Height="28"/>
+                    </ListViewItem>
+                </ListView>
+                <ListView>
+                    <ListViewItem>
+                        <TextBox Text="{Binding CustomerName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="400" Height="28"/>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <TextBox Text="{Binding CustomerCell, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="400" Height="28"/>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <TextBox Text="{Binding CustomerEmail, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="400" Height="28"/>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <TextBox Text="{Binding CustomerAddress1, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="400" Height="28"/>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <TextBox Text="{Binding CustomerAddress2, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="400" Height="28"/>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <TextBox Text="{Binding CustomerAddress3, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="400" Height="28"/>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <TextBox Text="{Binding City, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="400" Height="28"/>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <TextBox Text="{Binding PostalCode, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="400" Height="28"/>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <TextBox Text="{Binding Notes, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="400" Height="28"/>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <TextBox Text="{Binding QuoteNo, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="400" Height="28"/>
+                    </ListViewItem>
+                </ListView>
             </StackPanel>
         </StackPanel>
     </Grid>
