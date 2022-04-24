@@ -13,6 +13,16 @@ namespace Simple_Quotation_Tool
 
         public MainWindowViewModel()
         {
+            CustomerName = "";
+            CustomerEmail = "";
+            CustomerCell = "";
+            CustomerAddress1 = "";
+            CustomerAddress2 = "";
+            CustomerAddress3 = "";
+            PostalCode = "";
+            City = "";
+            Notes = "";
+            QuoteNo = "";
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
