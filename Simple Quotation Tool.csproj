@@ -14,6 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="MaterialDesignThemes" Version="4.5.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Utilities" Version="17.1.32210.191" />
     <PackageReference Include="Syncfusion.Pdf.Wpf" Version="20.1.0.47" />
   </ItemGroup>
 

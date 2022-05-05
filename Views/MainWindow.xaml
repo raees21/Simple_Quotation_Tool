@@ -75,7 +75,7 @@
                     </ListViewItem>
                 </ListView>
             </StackPanel>
-            <Button Content="Generate" FontSize="30" Height="57"/>
+            <Button Content="Generate" FontSize="30" Height="57" Command="{Binding Generate}"/>
 
         </StackPanel>
     </Grid>

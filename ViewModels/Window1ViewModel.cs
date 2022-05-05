@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.PlatformUI;
-using Simple_Quotation_Tool.ViewModels;
+﻿using Simple_Quotation_Tool.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,29 +6,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Input;
 
-namespace Simple_Quotation_Tool
+namespace Simple_Quotation_Tool.ViewModels
 {
-    public class MainWindowViewModel : INotifyPropertyChanged
+    public class Window1ViewModel : INotifyPropertyChanged
     {
-        #region Initialization
-
-        public MainWindowViewModel()
+        public Window1ViewModel(string customerName, string customerCell, string customerEmail, string customerAddress1,
+                                string customerAddress2, string customerAddress3, string city, string postalCode, 
+                                string notes, string quoteNumber)
         {
-            CustomerName = "";
-            CustomerEmail = "";
-            CustomerCell = "";
-            CustomerAddress1 = "";
-            CustomerAddress2 = "";
-            CustomerAddress3 = "";
-            PostalCode = "";
-            City = "";
-            Notes = "";
-            QuoteNo = "";
+            window = new Window1();
+            window.DataContext = window;
+            CustomerName = customerName;
+            CustomerCell = customerCell;
+            CustomerEmail = customerEmail;
+            CustomerAddress1 = customerAddress1;
+            CustomerAddress2 = customerAddress2;
+            CustomerAddress3 = customerAddress3;
+            City = city;
+            PostalCode = postalCode;
+            Notes = notes;
+            QuoteNo = quoteNumber;
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler? PropertyChanged;
 
         protected void OnPropertyChange(string propertyName)
         {
@@ -39,10 +39,6 @@ namespace Simple_Quotation_Tool
             }
 
         }
-
-        #endregion
-
-        #region Variables
 
         private string customerName;
         public string CustomerName
@@ -197,20 +193,20 @@ namespace Simple_Quotation_Tool
                 }
             }
         }
-        public Window1ViewModel window1ViewModel { get; set; }
+
+        public Window window { get; set; }
 
 
-        public ICommand Generate => new DelegateCommand(gen);
-
-        private void gen()
+        public void ShowDialog()
         {
-            window1ViewModel = new(CustomerName, CustomerCell, CustomerEmail, CustomerAddress1,
-                                                            CustomerAddress2, CustomerAddress3, City, PostalCode, Notes, QuoteNo);
-
-            window1ViewModel.ShowDialog();
+            if (window.Visibility == Visibility.Hidden)
+            {
+                window.Visibility = Visibility.Visible;
+            }
+            else if(window !=null)
+            {
+                window.ShowDialog();
+            }
         }
-
-
-        #endregion
     }
 }
